@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}MySite{% endblock %}</title>
         <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+
+        {% block extra_head %} {% endblock %} <!-- pridano dalsi stylovani -->
    
     </head>
 
