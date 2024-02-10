@@ -21,7 +21,7 @@
                    
                     <a href="{% url 'index' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
                     <a href="{% url 'bio' %}" class="{% if request.path == '/bio/' %}active{% endif %}">About</a>
-                    <p>Contact</p>
+                    <a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a>
 
                 <!-- Add more links as needed -->
             </div>
