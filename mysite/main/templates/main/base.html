@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}MySite{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+   
+    </head>
+
+<body class="{% block body_class %}default{% endblock %}">
+    <header>
+        <!-- Your header content goes here -->
+        <div id="logo">Olga <span>Titzenthalerová</span></div>
+        
+        <div>
+        <nav>
+            <div class="topnav" id="myTopnav">
+                   
+                    <a href="{% url 'index' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+                    <a href="{% url 'bio' %}" class="{% if request.path == '/bio/' %}active{% endif %}">About</a>
+                    <p>Contact</p>
+
+                <!-- Add more links as needed -->
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <a href="{% url 'code' %}" class="{% if request.path == '/code/' %}active{% endif %}">Code</a>
+        <a href="{% url 'build' %}"class="{% if request.path == '/build/' %}active{% endif %}">Build</a>
+        <a href="{% url 'live' %}"class="{% if request.path == '/live/' %}active{% endif %}">Live</a>
+    </div>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Your footer content goes here -->
+        <p>Olii &copy; 2024 </p>
+    </footer>
+</body>
+</html>
