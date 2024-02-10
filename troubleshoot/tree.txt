@@ -1,0 +1,30 @@
+mysite
+├── webpage
+│   ├── __pycache__
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── static
+│   ├── templates
+│   │   └── admin
+│   │   └── webpage
+│   │       └── index.html
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── mysite
+│   ├── __pycache__
+│   ├── templates
+│   │   └── mysite
+│   │       └── base.html
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+└── venv
+    └── ...
