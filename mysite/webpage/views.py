@@ -1,10 +1,8 @@
-
-#MyWebPage/mysite/webpage/views.py
 from django.shortcuts import render
 
 # Create your views here.
-from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at my webpage.")
+    return render(request, 'webpage/index.html') #zadavam cestu ve webpage/templates - pages/main.html
+

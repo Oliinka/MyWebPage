@@ -1,3 +1,5 @@
+##MyWebPage/mysite/urls.py
+
 """
 URL configuration for mysite project.
 
@@ -20,6 +22,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
 
 ##include new path
     path('webpage/', include("webpage.urls")), 

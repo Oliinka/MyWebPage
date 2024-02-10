@@ -1,0 +1,9 @@
+li a {
+    color: rgb(228, 227, 221);
+    text-shadow: 5px 5px 5px;
+    font-size: large;
+}
+
+body {
+    background: rgb(122, 145, 92);
+}
