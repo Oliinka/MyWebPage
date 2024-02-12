@@ -1,11 +1,14 @@
-.contact-form {
+/* mysite/contact/static/contact/contact_styles.css */
+.contact {
     max-width: 400px;
     margin: auto;
+    background-color: #333;
+    color: white;
 }
 
 /* Style form fields */
-.contact-form input,
-.contact-form textarea {
+.contact input,
+.contact textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -13,8 +16,27 @@
 }
 
 /* Style submit button */
-.contact-form input[type="submit"] {
+.contact input[type="submit"] {
     background-color: #4caf50;
     color: white;
     cursor: pointer;
 }
+
+
+.contact button {
+    background-color: #c7127c;
+    color: white;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Sidebar takes auto width, the rest is 1fr */
+    grid-template-rows: auto 1fr auto; /* Header, main content, and footer take auto height, the rest is 1fr */
+    height: 100vh; /* Full height of the viewport */
+    background-image: url('{% static "static/pictures/background.jpg" %}'); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover; /* Adjusts the background size to cover the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Ensures the background image is not repeated */
+  }
