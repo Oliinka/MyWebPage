@@ -1,0 +1,51 @@
+<!-- mysite/calculator/templates/calculator/calculator.html -->
+{% extends 'main/base.html' %}
+
+{% block title %}Calculator{% endblock %}
+
+{% block body_class %}page_class{% endblock %}
+
+
+{% block content %}
+
+
+<h1>Simple Calculator</h1>
+<form id="calculator-form">
+    <label for="num1">Number 1:</label>
+    <input type="text" name="num1" required>
+    <br>
+    <label for="num2">Number 2:</label>
+    <input type="text" name="num2" required>
+    <br>
+    <label for="operation">Operation:</label>
+    <select name="operation" required>
+        <option value="add">Addition</option>
+        <option value="subtract">Subtraction</option>
+        <option value="multiply">Multiplication</option>
+        <option value="divide">Division</option>
+    </select>
+    <br>
+    <button type="button" onclick="calculate()">Calculate</button>
+</form>
+<p id="result"></p>
+
+<script>
+    function calculate() {
+        const form = document.getElementById('calculator-form');
+        const formData = new FormData(form);
+
+        fetch('/calculate/', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('result').innerText = `Result: ${data.result}`;
+        });
+    }
+</script>
+
+
+
+{% endblock %}
+

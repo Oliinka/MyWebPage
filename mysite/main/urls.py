@@ -1,5 +1,6 @@
 from django.urls import path
 from contact.views import contact, success
+from calculator.views import calculate
 from . import views
 
 urlpatterns = [
@@ -13,5 +14,7 @@ urlpatterns = [
 
     path('contact/', contact, name='contact'),
     path('success/', success, name='success'),
+
+    path('calculator/', calculate, name='calculator'),
 
 ]

@@ -1,3 +1,4 @@
+<!-- mysite\main\templates\main\index.html -->
 
 {% extends 'main/base.html' %}
 
@@ -12,6 +13,16 @@
 {% block title %}MySite - Home{% endblock %}
 
 {% block content %}
-    <h2>Welcome to MySite</h2>
-    <p>This is the main page. Add your content here.</p>
+
+
+<div class="content-container">
+    <h1 class="Olii">Welcome to my webpage...</h1>
+    <br>
+    <p>Architect & civil engineering skills</p>
+    <br>
+    <p>&lt Coding > skills </p>
+    
+    <img class="profile-picture" src="{% static 'main/images/profile-pic.png' %}" alt="Profile Picture">
+</div>
+
 {% endblock %}

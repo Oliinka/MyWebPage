@@ -17,31 +17,25 @@
 
 <body class="{% block body_class %}default{% endblock %}">
     <header>
-        <!-- Your header content goes here -->
-   <div >
-        <ul class="name">
-            <li>Olii</li>
-            <li>Olga TITZENTHALEROVÁ</li>
-        </ul>
-   
-        <ul class="language">
-            <li>cz</li>
-            <li>en</li>
-        </ul>
-   </div>
-        
-       
+        <div class="header-content">
+            
+            <ul class="name">
+                <li class="Olii">Olii &nbsp;</li>
+                <li>OLGA <small>TITZENTHALEROVÁ</small></li>
+            </ul>
+            <ul class="language">
+                <li>cz</li>
+                <li>en</li>
+            </ul>
+        </div>
+    
         <nav>
             <div class="topnav" id="myTopnav">
-                   
-                    <a href="{% url 'index' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
-                    <a href="{% url 'bio' %}" class="{% if request.path == '/bio/' %}active{% endif %}">About</a>
-                    <a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a>
-
-                <!-- Add more links as needed -->
+                <a href="{% url 'index' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+                <a href="{% url 'bio' %}" class="{% if request.path == '/bio/' %}active{% endif %}">About</a>
+                <a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %}active{% endif %}">Contact</a>
             </div>
         </nav>
-        
     </header>
 
     <div class="sidebar">
@@ -57,7 +51,7 @@
 
     <footer>
         <!-- Your footer content goes here -->
-        <p><div class="Olii">Olii</div> &copy; 2024 </p>
+        <p><a href="{% url 'contact' %}" class="footer-link"><span class="Olii">Olii </span>&nbsp;  &copy; 2024 </a></p>
     </footer>
 </body>
 </html>

@@ -5,43 +5,53 @@ main {
 
 @font-face {
   font-family: 'KaushanScript-Regular';
-  src: url('main/fonts/KaushanScript-Regular.ttf') format('truetype');
+  src: url('fonts/KaushanScript-Regular.ttf') format('truetype');
   font-weight: normal;
+}
+/* HEADER-CONTENT */
+header .Olii {
+  font-family: 'KaushanScript-Regular', sans-serif;
+  font-size: 40px;
+}
+
+.name,
+.language {
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.name li,
+.language li {
+  margin-right: 5px;
+  color: white; /* Set text color to white */
 }
 
 /* HEADER */
 header {
   background-color: #333;
   color: #fff;
-
-}
-/* HEADER-CONTENT*/
-.Olii {
-font-family: 'KaushanScript-Regular', sans-serif;
+  padding: 0px; /* Adjust padding based on your preference */
+  text-align: center;
+  grid-column: span 2; /* Header spans both columns */
 }
 
-.space-evenly {
+header small {
+  display: block;
+  margin-top: 0px; /* Adjust this value to move the small text down */
+  font-size: 10px;
+}
+
+/* Align "Olii" and language to the oposite corners */
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.name,
-.language {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.name li,
-.language li {
-  margin-right: 10px;
-  color: white; /* Set text color to white */
-}
-
 /* HEADER TOP NAVIGATION BAR*/
-
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -72,7 +82,7 @@ font-family: 'KaushanScript-Regular', sans-serif;
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .topnav a {
       float: none;
       display: block;
@@ -83,7 +93,6 @@ font-family: 'KaushanScript-Regular', sans-serif;
       display: block;
   }
 }
-
 /* END OF HEADER */
 
 
@@ -96,39 +105,49 @@ font-family: 'KaushanScript-Regular', sans-serif;
     grid-template-columns: auto 1fr; /* Sidebar takes auto width, the rest is 1fr */
     grid-template-rows: auto 1fr auto; /* Header, main content, and footer take auto height, the rest is 1fr */
     height: 100vh; /* Full height of the viewport */
-    background: linear-gradient(to left, transparent, #050c69), url("images/background.jpg") no-repeat; /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background: linear-gradient(to left, transparent, #333), black; /*url("images/background.jpg") no-repeat*/
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
     background-attachment: fixed; /* Fixed background image */
+    font-size: 20px;
+    overflow-y: scroll;
+
+  }
+  main {
+    padding-left: 200px; /* Adjust the value based on your preference */
   }
 
+  body .Olii {
+    font-family: 'KaushanScript-Regular', sans-serif;
+  }
+  .content-container {
+    max-width: 700px;  /* Adjust the maximum width based on your preference */
+    margin-left: 0x;
+    padding-bottom: 100px;     /* Add some padding for spacing */
 
-body.default .topnav a {
-  background-color: gray;
 }
 
-body.main .topnav a.active,
-body.bio .topnav a.active,
-body.contact .topnav a.active {
-  background-color: white;
-  color: white;
-}
 
 /* SIDEBAR IN BODY*/
 
 .sidebar {
-  background-color: #050c69;
+  background-color: #333;
+  /*#050c69*/
 }
 
 .sidebar a {
   display: block;
   color: #f2f2f2;
+
+  text-align: left;
+
   text-decoration: none;
-  font-size: 18px;
-  padding-top: 5px;
-  padding-left: 15px;
+  font-size: 17px;
+  padding-top: 14px;
+  padding-left: 16px;
   padding-right: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 14px;
+
 }
 
 .sidebar a.active {
@@ -151,7 +170,7 @@ body.contact .topnav a.active {
 footer {
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 3px;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -168,5 +187,33 @@ footer {
   color: #fff;  /* Change color on hover */
   text-shadow: 2px 2px 2px #fff;
 }
+footer .Olii {
+  font-family: 'KaushanScript-Regular', sans-serif;
+}
 
 /* END OF FOOTER  */
+
+/* PROFILE-PIC*/
+.profile-picture {
+  width: 400px;
+  max-width: 50%;  /* Ensure the image doesn't exceed its container's width */
+  height: auto;     /* Maintain the aspect ratio of the image */
+  position: absolute;  /* Position the image */
+  top: 0;           /* Position from the top edge of the containing element */
+  right: 0;          /* Position from the left edge of the containing element */
+  margin: 50px;      /* Add some margin to the image for spacing */
+  padding: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .profile-picture {
+    max-width: 30%;  /* Ensure the image doesn't exceed its container's width */
+    height: auto;     /* Maintain the aspect ratio of the image */
+    position: absolute;  /* Position the image */
+    top: 0;           /* Position from the top edge of the containing element */
+    right: 0;          /* Position from the left edge of the containing element */
+    margin: 20px;      /* Add some margin to the image for spacing */
+    padding: 20px;
+
+  }
+}
