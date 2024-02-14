@@ -5,43 +5,53 @@ main {
 
 @font-face {
   font-family: 'KaushanScript-Regular';
-  src: url('main/fonts/KaushanScript-Regular.ttf') format('truetype');
+  src: url('fonts/KaushanScript-Regular.ttf') format('truetype');
   font-weight: normal;
+}
+/* HEADER-CONTENT */
+header .Olii {
+  font-family: 'KaushanScript-Regular', sans-serif;
+  font-size: 40px;
+}
+
+.name,
+.language {
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.name li,
+.language li {
+  margin-right: 5px;
+  color: white; /* Set text color to white */
 }
 
 /* HEADER */
 header {
   background-color: #333;
   color: #fff;
-
-}
-/* HEADER-CONTENT*/
-.Olii {
-font-family: 'KaushanScript-Regular', sans-serif;
+  padding: 0px; /* Adjust padding based on your preference */
+  text-align: center;
+  grid-column: span 2; /* Header spans both columns */
 }
 
-.space-evenly {
+header small {
+  display: block;
+  margin-top: 0px; /* Adjust this value to move the small text down */
+  font-size: 10px;
+}
+
+/* Align "Olii" and language to the center */
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.name,
-.language {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.name li,
-.language li {
-  margin-right: 10px;
-  color: white; /* Set text color to white */
-}
-
 /* HEADER TOP NAVIGATION BAR*/
-
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -72,7 +82,7 @@ font-family: 'KaushanScript-Regular', sans-serif;
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .topnav a {
       float: none;
       display: block;
@@ -83,7 +93,6 @@ font-family: 'KaushanScript-Regular', sans-serif;
       display: block;
   }
 }
-
 /* END OF HEADER */
 
 
@@ -96,23 +105,12 @@ font-family: 'KaushanScript-Regular', sans-serif;
     grid-template-columns: auto 1fr; /* Sidebar takes auto width, the rest is 1fr */
     grid-template-rows: auto 1fr auto; /* Header, main content, and footer take auto height, the rest is 1fr */
     height: 100vh; /* Full height of the viewport */
-    background: linear-gradient(to left, transparent, #050c69), url("images/background.jpg") no-repeat; /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background: linear-gradient(to left, transparent, #050c69), url("images/background.jpg") no-repeat;
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
     background-attachment: fixed; /* Fixed background image */
   }
 
-
-body.default .topnav a {
-  background-color: gray;
-}
-
-body.main .topnav a.active,
-body.bio .topnav a.active,
-body.contact .topnav a.active {
-  background-color: white;
-  color: white;
-}
 
 /* SIDEBAR IN BODY*/
 
@@ -151,7 +149,7 @@ body.contact .topnav a.active {
 footer {
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 3px;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -167,6 +165,9 @@ footer {
 .footer-link:hover {
   color: #fff;  /* Change color on hover */
   text-shadow: 2px 2px 2px #fff;
+}
+footer .Olii {
+  font-family: 'KaushanScript-Regular', sans-serif;
 }
 
 /* END OF FOOTER  */
