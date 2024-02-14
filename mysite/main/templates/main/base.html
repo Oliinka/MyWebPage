@@ -7,7 +7,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}MySite{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'main/images/favicon.ico' %}" >
         <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+
 
         {% block extra_head %} {% endblock %} <!-- pridano dalsi stylovani -->
    
@@ -16,9 +18,19 @@
 <body class="{% block body_class %}default{% endblock %}">
     <header>
         <!-- Your header content goes here -->
-        <div id="logo">Olga <span>Titzenthalerová</span></div>
+   <div >
+        <ul class="name">
+            <li>Olii</li>
+            <li>Olga TITZENTHALEROVÁ</li>
+        </ul>
+   
+        <ul class="language">
+            <li>cz</li>
+            <li>en</li>
+        </ul>
+   </div>
         
-        <div>
+       
         <nav>
             <div class="topnav" id="myTopnav">
                    
@@ -29,7 +41,7 @@
                 <!-- Add more links as needed -->
             </div>
         </nav>
-        </div>
+        
     </header>
 
     <div class="sidebar">
@@ -45,7 +57,7 @@
 
     <footer>
         <!-- Your footer content goes here -->
-        <p>Olii &copy; 2024 </p>
+        <p><div class="Olii">Olii</div> &copy; 2024 </p>
     </footer>
 </body>
 </html>

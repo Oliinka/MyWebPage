@@ -11,8 +11,7 @@
 {% endblock %}
 
 {% block content %}
-
-    <h2 class="contact">Get in touch!</h2>
+    <h3 class="contact">GET IN TOUCH!</h3>
     <form method="post" action="{% url 'contact' %}" class="contact">
         {% csrf_token %}
         {{ form.as_p }}
