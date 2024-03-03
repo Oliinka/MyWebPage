@@ -44,8 +44,7 @@ header small {
   font-size: 10px;
 }
 
-/* Align "Olii" and language to the oposite corners */
-.header-content {
+.space-evenly {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,28 +104,23 @@ header small {
     grid-template-columns: auto 1fr; /* Sidebar takes auto width, the rest is 1fr */
     grid-template-rows: auto 1fr auto; /* Header, main content, and footer take auto height, the rest is 1fr */
     height: 100vh; /* Full height of the viewport */
-    background: linear-gradient(to left, transparent, #333), black; /*url("images/background.jpg") no-repeat*/
+    background: linear-gradient(to left, transparent, #050c69), url("images/background.jpg") no-repeat; /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
     background-attachment: fixed; /* Fixed background image */
-    font-size: 20px;
-    overflow-y: scroll;
-
-  }
-  main {
-    padding-left: 200px; /* Adjust the value based on your preference */
   }
 
-  body .Olii {
-    font-family: 'KaushanScript-Regular', sans-serif;
-  }
-  .content-container {
-    max-width: 700px;  /* Adjust the maximum width based on your preference */
-    margin-left: 0x;
-    padding-bottom: 100px;     /* Add some padding for spacing */
 
+body.default .topnav a {
+  background-color: gray;
 }
 
+body.main .topnav a.active,
+body.bio .topnav a.active,
+body.contact .topnav a.active {
+  background-color: white;
+  color: white;
+}
 
 /* SIDEBAR IN BODY*/
 
