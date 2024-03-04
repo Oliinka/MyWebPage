@@ -11,11 +11,13 @@
 {% endblock %}
 
 {% block content %}
+<div class="contact-form">
     <h3 class="contact">GET IN TOUCH!</h3>
     <form method="post" action="{% url 'contact' %}" class="contact">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="contact">Submit</button>
     </form>
+</div>
 {% endblock %}
 
